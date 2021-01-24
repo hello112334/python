@@ -36,7 +36,7 @@ def save_data_to_array(path=DATA_PATH, max_pad_len=11):
         for wavfile in wavfiles:
             mfcc = wav2mfcc(wavfile, max_pad_len=max_pad_len)
             mfcc_vectors.append(mfcc)
-        np.save(label + '.npy', mfcc_vectors)
+        np.save(DATA_PATH + label + '.npy', mfcc_vectors)
 
 
 def get_train_test(split_ratio=0.6, random_state=42):
@@ -44,12 +44,12 @@ def get_train_test(split_ratio=0.6, random_state=42):
     labels, indices, _ = get_labels(DATA_PATH)
 
     # Getting first arrays
-    X = np.load(labels[0] + '.npy')
+    X = np.load(DATA_PATH + labels[0] + '.npy')
     y = np.zeros(X.shape[0])
 
     # Append all of the dataset into one single array, same goes for y
     for i, label in enumerate(labels[1:]):
-        x = np.load(label + '.npy')
+        x = np.load(DATA_PATH + label + '.npy')
         X = np.vstack((X, x))
         y = np.append(y, np.full(x.shape[0], fill_value= (i + 1)))
 

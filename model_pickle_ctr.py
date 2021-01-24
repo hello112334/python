@@ -20,8 +20,8 @@ def main():
     #学習手法にSVMを選択
     # model = svm.SVC()
     # model = svm.SVR()
-    model = svm.LinearSVC()
-    # model = svm.LinearSVR()
+    # model = svm.LinearSVC()
+    model = svm.LinearSVR()
     # model = LinearRegression()
 
     #学習
@@ -31,8 +31,10 @@ def main():
     with open('model.pickle', mode='wb') as f:
         pickle.dump(model,f,protocol=2)
 
-    # 評価データ(ここは自分で好きな値を入力)
-    weather = [[11,0,1.9,43.5]] 
+    # 評価データ(ここは自分で好きな値を入力)  
+    weather = [[16,0,12.9,32.5]] # 晴れ
+    # weather = [[11,0,1.9,43.5]] # 曇り
+
 
     # #predict関数で、評価データの天気を予測
     ans = round(float(model.predict(weather))) 

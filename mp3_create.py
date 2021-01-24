@@ -20,7 +20,6 @@ import scipy.io.wavfile
 input_file_path = 'C:\\Users\\TPI_CHEN\Documents\\TPI\\42_TK2_Dev\
 \\06_AWS_WebSer\\NodeJS\\aws_webser\\Web_frontend\\src\\assets\\audio\\input\\'
 # input_file_name = 'JLPT N1 Listening Sample Exam with Answers.mp3'
-# input_file_name = "30歳まで童貞だと魔法使いになれるらしい チェリまほ テレ東 TSUTAYA【期間限定 1話無料公開中】『30歳まで童貞だと魔法使いになれるらしい』第1話.mp3"
 # input_file_name = "newSong.mp3"
 # input_file_name = "voice_jp_2.mp3"
 input_file_name = "voice_jp_8.mp3"
