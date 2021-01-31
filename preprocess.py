@@ -6,7 +6,6 @@ import numpy as np
 
 DATA_PATH = "./data/"
 
-
 # Input: Folder Path
 # Output: Tuple (Label, Indices of the labels, one-hot encoded labels)
 def get_labels(path=DATA_PATH):

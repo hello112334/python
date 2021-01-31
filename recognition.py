@@ -55,7 +55,7 @@ model.save('ASR.h5')  # creates a HDF5 file 'model.h5'
 
 
 # 預測(prediction)
-mfcc = wav2mfcc('./data/happy/012c8314_nohash_0.wav')
-mfcc_reshaped = mfcc.reshape(1, 20, 11, 1)
-print("labels=", get_labels())
-print("predict=", np.argmax(model.predict(mfcc_reshaped)))
+# mfcc = wav2mfcc('./data/happy/012c8314_nohash_0.wav')
+# mfcc_reshaped = mfcc.reshape(1, 20, 11, 1)
+# print("labels=", get_labels())
+# print("predict=", np.argmax(model.predict(mfcc_reshaped)))
